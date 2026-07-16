@@ -41,6 +41,13 @@ header.nav{position:sticky;top:0;z-index:100;height:var(--nav-h);display:flex;al
 .nav__cta{font-family:var(--font-m);font-size:11px;letter-spacing:.08em;text-transform:uppercase;text-decoration:none;color:#fff;background:var(--ink-primary);padding:9px 16px;border-radius:7px;}
 .nav__cta:hover{background:var(--accent-ink);}
 @media(max-width:900px){.nav__links{display:none;}}
+.cta-short{display:none;}
+@media(max-width:420px){
+  .cta-full{display:none;}
+  .cta-short{display:inline;}
+  header.nav{padding:0 16px;}
+  .nav__mark{font-size:16px;}
+}
 
 .btn{display:inline-flex;align-items:center;gap:7px;cursor:pointer;border:none;font-family:var(--font-m);font-size:11px;font-weight:500;letter-spacing:.09em;text-transform:uppercase;text-decoration:none;padding:13px 26px;border-radius:8px;transition:opacity .2s,transform .15s,background .2s;}
 .btn:active{transform:translateY(1px);}
@@ -98,10 +105,10 @@ section{padding:var(--pad) 0;}
 .company-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:12px;}
 @media(max-width:900px){.company-grid{grid-template-columns:repeat(2,1fr);}}
 @media(max-width:600px){.company-grid{grid-template-columns:1fr;}}
-.company-card{background:#fff;border:1px solid var(--ash-03);border-radius:12px;padding:16px 18px;display:flex;justify-content:space-between;align-items:center;gap:10px;transition:border-color .15s;}
+.company-card{background:#fff;border:1px solid var(--ash-03);border-radius:12px;padding:16px 18px;display:flex;flex-wrap:wrap;justify-content:space-between;align-items:center;gap:8px 10px;transition:border-color .15s;}
 .company-card:hover{border-color:var(--accent);}
 .company-card .num{font-family:var(--font-m);font-size:10px;color:var(--ink-tertiary);flex-shrink:0;width:20px;}
-.company-card .cname{font-family:var(--font-d);font-weight:600;font-size:14px;flex:1;}
+.company-card .cname{font-family:var(--font-d);font-weight:600;font-size:14px;flex:1;min-width:0;overflow-wrap:break-word;}
 .company-card .ctag{font-family:var(--font-m);font-size:8.5px;letter-spacing:.05em;text-transform:uppercase;padding:3px 7px;border-radius:99px;background:var(--ash-01);color:var(--ink-tertiary);white-space:nowrap;}
 .company-card a.visit{color:var(--accent);flex-shrink:0;display:flex;}
 .empty-state{padding:40px;text-align:center;color:var(--ink-tertiary);font-family:var(--font-m);font-size:13px;grid-column:1/-1;}
@@ -261,7 +268,7 @@ section{padding:var(--pad) 0;}
     <li><a href="#flags">Red Flags</a></li>
     <li><a href="#tracker">My Tracker</a></li>
   </ul>
-  <a class="nav__cta" href="#build-cta">Build Like This →</a>
+  <a class="nav__cta" href="#build-cta"><span class="cta-full">Build Like This →</span><span class="cta-short">Build →</span></a>
 </header>
 
 <main id="top">
@@ -551,7 +558,7 @@ section{padding:var(--pad) 0;}
     <span class="ey">Halo drops it. We build it. You track it.</span>
     <h2>Want a website that actually <span style="color:var(--accent-light)">scales</span>, built in days — we help.</h2>
     <p>From one PDF to a fully interactive, trackable tool, live on the web. That's the BlindspotLab process.</p>
-    <div class="foot-tiers"><span>Spark · 3 days</span><span>Ship · 10 days</span><span>Forge · 21 days</span><span>Care &amp; Evolve · ongoing</span></div>
+    <div class="foot-tiers"><span>Spark · 3-5 days</span><span>Ship · 10 days</span><span>Forge · 21 days</span><span>Care &amp; Evolve · ongoing</span></div>
     <a class="btn btn-primary" href="mailto:hello@blindspotlab.xyz?subject=Let%27s%20build%20something%20that%20scales">Start a Build →</a>
   </div>
 </div>
